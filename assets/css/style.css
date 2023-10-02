@@ -132,3 +132,49 @@ li {
     text-decoration: underline;
     font-size: 0.8rem;
 }
+
+/* Stile dei contacts */
+.contacts {
+    background-color: white;
+    width: 100%;
+    height: calc(100% - 70px - 50px - 80px);
+    overflow-y: scroll;
+}
+
+/* Stile dei contacts */
+.contact {
+    padding: 0.8rem;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    cursor: pointer;
+}
+
+/* Stile dei contacts (immagine profilo) */
+.contact:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Stile dei contacts (per creare il cerchio) */
+.circle-contact {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: grey;
+}
+  
+.circle-contact img {
+    border-radius: 50%;
+}
+
+/* Stile dei contacts (nome e orario) */
+.name-msg {
+    padding: 0.5rem;
+    flex-grow: 1;
+}
+  
+.contact-time {
+    font-size: 0.8rem;
+    color: grey;
+}
+  
+  
