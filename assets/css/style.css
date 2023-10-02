@@ -18,6 +18,16 @@ body {
     font-family: 'Rubik Mono One', sans-serif;
 }
 
+/* Stile dell'immagine */
+img {
+    max-width: 100%;
+}
+
+/* Stile della lista */
+li {
+    list-style: none;
+}
+
 /* Stile del container del body */
 .container {
     width: 100%;
@@ -42,7 +52,7 @@ body {
 }
 
 /* Stile della sidebar (contacts) */
-.sidebar-contacts {
+.sliderbar-contacts {
     width: 500px;
     height: 100%;
 }
@@ -82,10 +92,43 @@ body {
 }
 
 /* Stile della sidebar (icons) */
-.sidebar-icons i {
+.slidebar-icons i {
     color: lightgray;
     font-size: 1.4rem;
     margin-right: 0.8rem;
     cursor: pointer;
 }
-  
+
+/* Stile della sidebar (notifiche) */
+.notifications {
+    width: 100%;
+    height: 80px;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+}
+
+/* Stile della sidebar (icona della notifica) */
+.bell {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #8edafc;
+    background-color: white;
+}
+
+/* Stile della sidebar (lista delle notifiche) */
+.notifications > * {
+    margin-left: 0.8rem;
+}
+
+/* Stile della sidebar (lista delle notifiche) */
+.notifications-list li span {
+    color: darkgray;
+    text-decoration: underline;
+    font-size: 0.8rem;
+}
