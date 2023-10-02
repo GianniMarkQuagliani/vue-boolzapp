@@ -1,0 +1,65 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile del debug */
+.debug {
+    border: 1px solid red;
+}
+
+/* Stile del testo del corpo della pagina */
+body {
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+/* Stile del container */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+    0deg,
+    rgba(17, 27, 33, 1) 80%,
+    rgba(0, 168, 132, 1) 80%
+  );
+}
+
+/* Stile del container */
+.whatsapp {
+    width: 70%;
+    min-width: 900px;
+    height: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+/* Stile della sidebar */
+.sidebar-contacts {
+    width: 500px;
+    height: 100%;
+}
+
+/* Stile della sidebar */
+.sidebar-header {
+    width: 100%;
+    height: 70px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid lightgrey;
+}
+
+/* Stile della sidebar */
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+}
