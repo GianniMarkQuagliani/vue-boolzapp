@@ -28,24 +28,24 @@
 
         <!-- Container -->
 
-        <div class="container debug">
+        <div class="container ">
 
-            <div class="whatsapp debug">
+            <div class="whatsapp ">
 
                 <!-- Sidebar -->
-                <div class="sliderbar-contacts debug">
-                    <div class="sidebar-header debug">
+                <div class="sliderbar-contacts ">
+                    <div class="sidebar-header ">
 
                         <!-- Profile -->
-                        <div class="sidebar-profile debug">
-                            <div class="sidebar-profile-pic debug">
-                                <img src="assets/img/avatar_io.jpg" alt="">
+                        <div class="sidebar-profile ">
+                            <div class="sidebar-profile-pic ">
+                                <img src="./assets/img/avatar_io.jpg" alt="">
                             </div>
                             <span id="profile-name">Sofia</span>
                         </div>
 
                         <!-- Icons -->
-                        <div class="slidebar-icons debug">
+                        <div class="slidebar-icons ">
                             <i class="fa-solid fa-circle-notch"></i>
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -53,14 +53,14 @@
                     </div>
 
                     <!-- Notifications -->
-                    <div class="notifications debug">
+                    <div class="notifications ">
                         <!-- Bell -->
-                        <div class="bell debug">
+                        <div class="bell ">
                             <i class="fa-solid far fa-bell-slash"></i>
                         </div>
 
                         <!-- Notifications List -->
-                        <ul class="notifications-list debug">
+                        <ul class="notifications-list ">
                             <li>
                                 <h4>Ricevi notifiche di nuovi messaggi</h4>
                             </li>
@@ -74,35 +74,35 @@
 
 
                     <!-- Search -->
-                    <div class="debug search">
+                    <div class=" search">
                         <div class="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input class="debug search2" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input class=" search2" type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- /Search -->
 
                     <!-- Contacts -->
-                    <div class="contacts debug">
+                    <div class="contacts ">
                         <!-- Questo ciclo v-for itera attraverso l'array "contacts" assegnando a "contact" ogni elemento e a "index" l'indice corrispondente. -->
                         <div v-for="(contact, index) in contacts">
 
                             <!-- Contact -->
                             <div 
-                            :class="['contact', { 'debug': activeContact === index }]"
+                            :class="['contact', { '': activeContact === index }]"
                             @click="changeContact(index)"
                             v-if="contact.visible === true"
                             >
                                 <!-- Circle Contact -->
-                                <div class="circle-contact debug">
-                                    <img :src=" '/assets/img/avatar' + contact.avatar  + '.jpg' ">
+                                <div class="circle-contact ">
+                                    <img :src=" './assets/img/avatar' + contact.avatar  + '.jpg' ">
                                 </div>
 
                                 <!-- Name & Time -->
-                                <div class="name-msg debug">
+                                <div class="name-msg ">
                                     <h4 class="profile-name">{{ contact.name }}</h4>
                                 </div>
-                                <div class="contact-time debug">
+                                <div class="contact-time ">
                                     <span>12:00</span>
                                 </div>
 
@@ -116,20 +116,20 @@
                 </div>
 
                 <!-- Right section -->
-                <div class="right-section debug">
+                <div class="right-section ">
                     <!-- Circle Contact and info and icons -->
-                    <div class="header-section debug">
+                    <div class="header-section ">
                         <div class="profile-adresse">
-                            <div class="circle-contact debug">
-                                <img :src="`/assets/img/avatar${contacts[activeContact].avatar}.jpg`">
+                            <div class="circle-contact ">
+                                <img :src="`./assets/img/avatar${contacts[activeContact].avatar}.jpg`">
                             </div>
-                            <div class="info debug">
+                            <div class="info ">
                                 <span>{{contacts[activeContact].name}}</span>
-                                <span id="last-online" class="debug">Ultimo accesso alle 12:00</span>
+                                <span id="last-online" class="">Ultimo accesso alle 12:00</span>
                             </div>
                         </div>
                         <!-- Icons -->
-                        <div class="icons-section debug">
+                        <div class="icons-section ">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -137,14 +137,14 @@
                     </div>
 
                     <!-- Chat -->
-                    <div class="chat-section debug">
+                    <div class="chat-section ">
                         <div 
                         v-for="(message) in contacts[activeContact].messages" :class=" `${message.status}` " class="single-msg">
-                            <div class="msg debug">
-                                <div class="msg-text debug">
+                            <div class="msg ">
+                                <div class="msg-text ">
 
                                     <!-- Message -->
-                                    <div class="dropdown debug">
+                                    <div class="dropdown ">
                                         <div class="dropdown-icon">
                                             <i class="fa-solid fa-chevron-down"></i>
                                         </div>
@@ -157,7 +157,7 @@
                                     </div>
                                     <span>{{message.message}}</span>
                                 </div>
-                                <div class="msg-info debug">
+                                <div class="msg-info ">
                                     <span>{{message.date}}</span>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@
                         id="message-chat" 
                         type="text" 
                         placeholder="Scrivi un messaggio">
-                        <div class="vocal-message">
+                        <div class="vocal-msg">
                             <i class="fa-solid fa-microphone"></i>
                         </div>
                     </div>
