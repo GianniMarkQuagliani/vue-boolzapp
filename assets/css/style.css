@@ -1,16 +1,16 @@
-/* Reset CSS */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Debug border rosso */
+/* Stile di debug */
 .debug {
     border: 1px solid red;
 }
 
-/* Stili del font del corpo */
+/* Stili del corpo della pagina */
 body {
     font-family: 'Fredoka', sans-serif; /* Preferito */
     font-family: 'Inconsolata', monospace;
@@ -18,17 +18,17 @@ body {
     font-family: 'Rubik Mono One', sans-serif;
 }
 
-/* Impostazione della larghezza massima delle immagini */
+/* Stile delle immagini */
 img {
     max-width: 100%;
 }
 
-/* Rimozione del segno di elenco per gli elementi della lista */
+/* Rimuovi i punti elenco predefiniti dai <li> */
 li {
     list-style: none;
 }
 
-/* Impostazione del background lineare per il container */
+/* Stili per il contenitore principale */
 .container {
     width: 100%;
     height: 100vh;
@@ -39,7 +39,7 @@ li {
     );
 }
 
-/* Stili per il pannello di WhatsApp */
+/* Stili per il conteitore WhatsApp */
 .whatsapp {
     width: 70%;
     min-width: 900px;
@@ -51,13 +51,13 @@ li {
     display: flex;
 }
 
-/* Stili per la barra dei contatti */
+/* Stili per la barra laterale dei contatti */
 .sliderbar-contacts {
     width: 500px;
     height: 100%;
 }
 
-/* Intestazione della barra laterale */
+/* Stili per l'intestazione della barra laterale dei contatti */
 .sidebar-header {
     width: 100%;
     height: 70px;
@@ -68,7 +68,7 @@ li {
     border-right: 1px solid lightgrey;
 }
 
-/* Stili per il profilo nella barra laterale */
+/* Stili per il profilo nella barra laterale dei contatti */
 .sidebar-profile {
     display: flex;
     align-items: center;
@@ -80,6 +80,7 @@ li {
     margin-left: 1rem;
 }
 
+/* Stili per l'immagine del profilo nella barra laterale dei contatti */
 .sidebar-profile-pic img {
     border-radius: 50%;
 }
@@ -88,7 +89,7 @@ li {
     margin-left: 0.5rem;
 }
 
-/* Icone nella barra laterale */
+/* Stili per le icone nella barra laterale dei contatti */
 .slidebar-icons i {
     color: lightgray;
     font-size: 1.4rem;
@@ -96,7 +97,7 @@ li {
     cursor: pointer;
 }
 
-/* Notifiche */
+/* Stili per le notifiche */
 .notifications {
     width: 100%;
     height: 80px;
@@ -127,7 +128,7 @@ li {
     font-size: 0.8rem;
 }
 
-/* Elenco dei contatti */
+/* Stili per la lista dei contatti */
 .contacts {
     background-color: white;
     width: 100%;
@@ -135,7 +136,7 @@ li {
     overflow-y: scroll;
 }
 
-/* Singolo contatto */
+/* Stili per un singolo contatto nella lista dei contatti */
 .contact {
     padding: 0.8rem;
     border-bottom: 1px solid lightgrey;
@@ -168,12 +169,12 @@ li {
     color: grey;
 }
 
-/* Sezione destra */
+/* Stili per la sezione a destra della finestra di chat */
 .right-section {
     width: calc(100% - (500px));
 }
 
-/* Intestazione della sezione superiore */
+/* Stili per l'intestazione nella sezione a destra della finestra di chat */
 .header-section {
     width: 100%;
     height: 70px;
@@ -184,6 +185,7 @@ li {
     padding: 1rem;
 }
 
+/* Stili per l'indirizzo del profilo nella sezione a destra della finestra di chat */
 .profile-adresse {
     display: flex;
     align-items: center;
@@ -199,6 +201,7 @@ li {
     color: darkgrey;
 }
 
+/* Stili per le icone nella sezione a destra della finestra di chat */
 .icons-section i {
     color: lightgray;
     font-size: 1.4rem;
@@ -241,7 +244,7 @@ li {
     border-radius: 0px 5px 5px 0px;
 }
 
-/* Sezione delle chat */
+/* Stili per la sezione delle chat */
 .chat-section {
     width: 100%;
     height: calc(100% - 70px - 70px);
@@ -250,11 +253,11 @@ li {
     padding: 4rem;
 }
 
+/* Stili per un singolo messaggio */
 .single-msg {
     margin-bottom: 0.8rem;
 }
 
-/* Contenitore del messaggio */
 .msg-box {
     max-width: 300px;
     min-height: 50px;
@@ -267,7 +270,7 @@ li {
     max-width: 99%;
 }
 
-/* Stili per l'icona della freccina che comparirà e scomparirà */
+/* Stili per il menu a discesa nei messaggi */
 .dropdown {
     position: absolute;
     top: 10px;
@@ -302,4 +305,32 @@ li {
     padding: 0.5rem 0;
     font-size: 0.8rem;
     cursor: pointer;
+}
+
+/* Stili per la barra dei messaggi */
+.message-section {
+    width: 100%;
+    height: 70px;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#message-chat {
+    width: 80%;
+    height: 40px;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* Stili per le icone delle emoji e dei messaggi vocali */
+.emojis,
+.vocal-msg {
+  font-size: 1.6rem;
+  color: darkgray;
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
 }
