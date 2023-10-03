@@ -167,9 +167,13 @@ createApp({
                     ],
                 }
             ],
+            activeContact: 0, // Contatto attualmente attivo
         }
     },
     methods: {
-        
+        // Milestone 1: Cambio di contatto attivo
+        changeContact(clickedIndex) {
+            this.activeContact = clickedIndex;
+        },
     }
 }).mount('#app');

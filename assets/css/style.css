@@ -334,3 +334,7 @@ li {
   text-align: center;
   cursor: pointer;
 }
+
+.visible {
+    display: block;
+}

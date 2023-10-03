@@ -88,7 +88,11 @@
                         <div v-for="(contact, index) in contacts">
 
                             <!-- Contact -->
-                            <div class="contact debug">
+                            <div 
+                            :class="['contact', { 'debug': activeContact === index }]"
+                            @click="changeContact(index)"
+                            v-if="contact.visible === true"
+                            >
                                 <!-- Circle Contact -->
                                 <div class="circle-contact debug">
                                     <img :src=" '/assets/img/avatar' + contact.avatar  + '.jpg' ">
@@ -117,10 +121,10 @@
                     <div class="header-section debug">
                         <div class="profile-adresse">
                             <div class="circle-contact debug">
-                                <img src="assets/img/avatar_4.jpg">
+                                <img :src="`/assets/img/avatar${contacts[activeContact].avatar}.jpg`">
                             </div>
                             <div class="info debug">
-                                <span>Ugo DeUghi</span>
+                                <span>{{contacts[activeContact].name}}</span>
                                 <span id="last-online" class="debug">Ultimo accesso alle 12:00</span>
                             </div>
                         </div>
