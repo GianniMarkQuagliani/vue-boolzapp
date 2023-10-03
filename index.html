@@ -18,6 +18,8 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
 
+    <!-- Luxon CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.3/luxon.min.js" integrity="sha512-gUQcFuEaDuAEqvxIQ9GDdMcCeFmG5MPnoc6ruJn+nyCNHrHM2oB97GOVLIOiixzTxPYmIfEQbOoQmx55UscLyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Boolzapp</title>
 </head>
 <body>
@@ -82,19 +84,19 @@
 
                     <!-- Contacts -->
                     <div class="contacts debug">
-                        <div>
+                        <!-- Questo ciclo v-for itera attraverso l'array "contacts" assegnando a "contact" ogni elemento e a "index" l'indice corrispondente. -->
+                        <div v-for="(contact, index) in contacts">
 
                             <!-- Contact -->
                             <div class="contact debug">
-
                                 <!-- Circle Contact -->
                                 <div class="circle-contact debug">
-                                    <img src="assets/img/avatar_1.jpg" alt="">
+                                    <img :src=" '/assets/img/avatar' + contact.avatar  + '.jpg' ">
                                 </div>
 
                                 <!-- Name & Time -->
                                 <div class="name-msg debug">
-                                    <h4 class="profile-name">Ugo DeUghi</h4>
+                                    <h4 class="profile-name">{{ contact.name }}</h4>
                                 </div>
                                 <div class="contact-time debug">
                                     <span>12:00</span>
