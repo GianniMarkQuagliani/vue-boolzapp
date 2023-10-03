@@ -1,45 +1,45 @@
-/* RESET CSS */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Stile del debug */
+/* Debug border rosso */
 .debug {
     border: 1px solid red;
 }
 
-/* Stile del testo del corpo della pagina */
+/* Stili del font del corpo */
 body {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Fredoka', sans-serif; /* Preferito */
     font-family: 'Inconsolata', monospace;
     font-family: 'Lato', sans-serif;
     font-family: 'Rubik Mono One', sans-serif;
 }
 
-/* Stile dell'immagine */
+/* Impostazione della larghezza massima delle immagini */
 img {
     max-width: 100%;
 }
 
-/* Stile della lista */
+/* Rimozione del segno di elenco per gli elementi della lista */
 li {
     list-style: none;
 }
 
-/* Stile del container del body */
+/* Impostazione del background lineare per il container */
 .container {
     width: 100%;
     height: 100vh;
     background: linear-gradient(
-    0deg,
-    rgba(17, 27, 33, 1) 80%,
-    rgba(0, 168, 132, 1) 80%
-  );
+        0deg,
+        rgba(17, 27, 33, 1) 80%,
+        rgba(0, 168, 132, 1) 80%
+    );
 }
 
-/* Stile del container */
+/* Stili per il pannello di WhatsApp */
 .whatsapp {
     width: 70%;
     min-width: 900px;
@@ -51,13 +51,13 @@ li {
     display: flex;
 }
 
-/* Stile della sidebar (contacts) */
+/* Stili per la barra dei contatti */
 .sliderbar-contacts {
     width: 500px;
     height: 100%;
 }
 
-/* Stile della sidebar (header) */
+/* Intestazione della barra laterale */
 .sidebar-header {
     width: 100%;
     height: 70px;
@@ -68,30 +68,27 @@ li {
     border-right: 1px solid lightgrey;
 }
 
-/* Stile della sidebar (immagine profilo) */
+/* Stili per il profilo nella barra laterale */
 .sidebar-profile {
     display: flex;
     align-items: center;
 }
 
-/* Stile della sidebar (immagine profilo) */
 .sidebar-profile-pic {
     width: 50px;
     height: 50px;
     margin-left: 1rem;
 }
 
-/* Stile della sidebar (immagine profilo) */
 .sidebar-profile-pic img {
     border-radius: 50%;
 }
 
-/* Stile della sidebar (nome utente) */
 #profile-name {
     margin-left: 0.5rem;
 }
 
-/* Stile della sidebar (icons) */
+/* Icone nella barra laterale */
 .slidebar-icons i {
     color: lightgray;
     font-size: 1.4rem;
@@ -99,7 +96,7 @@ li {
     cursor: pointer;
 }
 
-/* Stile della sidebar (notifiche) */
+/* Notifiche */
 .notifications {
     width: 100%;
     height: 80px;
@@ -108,7 +105,6 @@ li {
     align-items: center;
 }
 
-/* Stile della sidebar (icona della notifica) */
 .bell {
     width: 50px;
     height: 50px;
@@ -121,19 +117,17 @@ li {
     background-color: white;
 }
 
-/* Stile della sidebar (lista delle notifiche) */
 .notifications > * {
     margin-left: 0.8rem;
 }
 
-/* Stile della sidebar (lista delle notifiche) */
 .notifications-list li span {
     color: darkgray;
     text-decoration: underline;
     font-size: 0.8rem;
 }
 
-/* Stile dei contacts */
+/* Elenco dei contatti */
 .contacts {
     background-color: white;
     width: 100%;
@@ -141,7 +135,7 @@ li {
     overflow-y: scroll;
 }
 
-/* Stile dei contacts */
+/* Singolo contatto */
 .contact {
     padding: 0.8rem;
     border-bottom: 1px solid lightgrey;
@@ -149,41 +143,37 @@ li {
     cursor: pointer;
 }
 
-/* Stile dei contacts (immagine profilo) */
 .contact:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Stile dei contacts (per creare il cerchio) */
 .circle-contact {
     width: 55px;
     height: 55px;
     border-radius: 50%;
     background-color: grey;
 }
-  
+
 .circle-contact img {
     border-radius: 50%;
 }
 
-/* Stile dei contacts (nome e orario) */
 .name-msg {
     padding: 0.5rem;
     flex-grow: 1;
 }
 
-/* Stile dei contacts (orario) */
 .contact-time {
     font-size: 0.8rem;
     color: grey;
 }
 
-/* Stile della right section */
+/* Sezione destra */
 .right-section {
     width: calc(100% - (500px));
 }
 
-/* Stile della header section */
+/* Intestazione della sezione superiore */
 .header-section {
     width: 100%;
     height: 70px;
@@ -194,7 +184,6 @@ li {
     padding: 1rem;
 }
 
-/* Stile della info section */
 .profile-adresse {
     display: flex;
     align-items: center;
@@ -210,7 +199,6 @@ li {
     color: darkgrey;
 }
 
-/* Stile delle icone */
 .icons-section i {
     color: lightgray;
     font-size: 1.4rem;
@@ -218,6 +206,7 @@ li {
     cursor: pointer;
 }
 
+/* Stili per la barra di ricerca */
 .search {
     width: 100%;
     height: 50px;
@@ -250,4 +239,67 @@ li {
     align-items: center;
     padding-left: 0.5rem;
     border-radius: 0px 5px 5px 0px;
+}
+
+/* Sezione delle chat */
+.chat-section {
+    width: 100%;
+    height: calc(100% - 70px - 70px);
+    overflow-y: scroll;
+    background-image: url(../img/mine.jpg);
+    padding: 4rem;
+}
+
+.single-msg {
+    margin-bottom: 0.8rem;
+}
+
+/* Contenitore del messaggio */
+.msg-box {
+    max-width: 300px;
+    min-height: 50px;
+    border-radius: 10px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.msg-text {
+    max-width: 99%;
+}
+
+/* Stili per l'icona della freccina che comparirà e scomparirà */
+.dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dropdown-icon {
+    position: relative;
+    font-size: .8rem;
+    color: grey;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    box-shadow: 2px 4px 5px 2px rgba(0, 0, 0, .1);
+    width: 120px;
+    height: 70px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+    z-index: 99;
+    opacity: 0;
+    transition: 150ms ease-in-out;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    cursor: pointer;
 }
