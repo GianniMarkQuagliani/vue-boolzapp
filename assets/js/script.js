@@ -170,8 +170,6 @@ createApp({
             ],
             activeContact: 0, // Contatto attualmente attivo
             myMessage: "", // Messaggio inserito dall'utente
-            foundContacts: "", // Ricerca dei contatti
-            actuallyFoundContacts: [], // Contatti trovati
         }
     },
     methods: {
@@ -229,5 +227,5 @@ createApp({
         },
     }
 
-    
+
 }).mount('#app');
