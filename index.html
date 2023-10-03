@@ -138,8 +138,9 @@
 
                     <!-- Chat -->
                     <div class="chat-section debug">
-                        <div class="msg debug">
-                            <div class="msg-box debug">
+                        <div 
+                        v-for="(message) in contacts[activeContact].messages" :class=" `${message.status}` " class="single-msg">
+                            <div class="msg debug">
                                 <div class="msg-text debug">
 
                                     <!-- Message -->
@@ -154,10 +155,10 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <span>Messaggio</span>
+                                    <span>{{message.message}}</span>
                                 </div>
                                 <div class="msg-info debug">
-                                    <span>Messaggio e data</span>
+                                    <span>{{message.date}}</span>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +169,12 @@
                         <div class="emojis">
                             <i class="fa-regular fa-face-smile"></i>
                         </div>
-                        <input id="message-chat" type="text" placeholder="Scrivi un messaggio">
+                        <input 
+                        v-model.trim="myMessage" 
+                        @keyup.enter="newMessage"
+                        id="message-chat" 
+                        type="text" 
+                        placeholder="Scrivi un messaggio">
                         <div class="vocal-message">
                             <i class="fa-solid fa-microphone"></i>
                         </div>

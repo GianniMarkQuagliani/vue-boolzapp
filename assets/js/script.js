@@ -1,4 +1,5 @@
 const { createApp } = Vue;
+const DateTime = luxon.DateTime;
 
 createApp({
     data() {
@@ -168,6 +169,9 @@ createApp({
                 }
             ],
             activeContact: 0, // Contatto attualmente attivo
+            myMessage: "", // Messaggio inserito dall'utente
+            foundContacts: "", // Ricerca dei contatti
+            actuallyFoundContacts: [], // Contatti trovati
         }
     },
     methods: {
@@ -175,5 +179,55 @@ createApp({
         changeContact(clickedIndex) {
             this.activeContact = clickedIndex;
         },
+
+
+
+        // Milestone 2: Aggiunta di un nuovo messaggio e risposta automatica
+        newMessage() {
+            // Aggiunta di un nuovo messaggio
+            if (this.myMessage.length >= 1) {
+                this.contacts[this.activeContact].messages.push({
+                    date: this.generateDate(),
+                    message: this.myMessage,
+                    status: 'sent'
+                });
+                this.myMessage = "";
+                this.automaticMessage(); // Invio della risposta automatica
+            }
+        },
+        
+        automaticMessage() {
+            // Simulazione di una risposta automatica randomica
+            const getRandomResponse = () => {
+                const responses = [
+                    "Va bene!",
+                    "Sì, certo!",
+                    "Non so cosa rispondere.",
+                    "Puoi spiegare meglio?",
+                    "Mi dispiace, non ho capito.",
+                    "Grazie!",
+                    "Cosa fai di bello?",
+                ];
+                const randomIndex = Math.floor(Math.random() * responses.length);
+                return responses[randomIndex];
+            };
+            
+            // Simulazione dell'invio della risposta
+            setTimeout(() => {
+                const randomResponse = getRandomResponse();
+                this.contacts[this.activeContact].messages.push({
+                    date: this.generateDate(),
+                    message: randomResponse,
+                    status: 'received'
+                });
+            }, 1000);
+        },
+
+        // Generazione della data
+        generateDate() {
+            return DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
+        },
     }
+
+    
 }).mount('#app');

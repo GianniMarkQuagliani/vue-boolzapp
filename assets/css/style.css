@@ -258,7 +258,7 @@ li {
     margin-bottom: 0.8rem;
 }
 
-.msg-box {
+.msg {
     max-width: 300px;
     min-height: 50px;
     border-radius: 10px;
@@ -268,6 +268,25 @@ li {
 
 .msg-text {
     max-width: 99%;
+}
+
+.sent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sent .msg {
+    background-color: #d5f9ba;
+}
+  
+.received .msg {
+    background-color: white;
+}
+  
+.msg-info {
+    padding-top: 0.5rem;
+    font-size: 0.7rem;
+    text-align: right;
 }
 
 /* Stili per il menu a discesa nei messaggi */
