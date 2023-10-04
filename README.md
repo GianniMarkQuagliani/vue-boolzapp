@@ -7,3 +7,4 @@
 - Generazione della data
 - Invio della risposta automatica
 - Simulazione di una risposta automatica randomica
+- Aggiungo un metodo per la ricerca del contatto

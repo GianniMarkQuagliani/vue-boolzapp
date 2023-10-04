@@ -221,6 +221,24 @@ createApp({
             }, 1000);
         },
 
+        // Milestone : Filtrare i contatti
+        searchContacts() {
+            for (let i = 0; i < this.contacts.length; i++) {
+                const contact = this.contacts[i];
+                const foundContactsLower = this.foundContacts.toLowerCase();
+                const nameLower = contact.name.toLowerCase();
+                
+                if (!nameLower.includes(foundContactsLower) && foundContactsLower !== "") {
+                    contact.visible = false;
+                    this.notShowing = true;
+                } else {
+                    contact.visible = true;
+                    this.actuallyFoundContacts.push(contact);
+                }
+                console.log(contact);
+            }
+        },        
+
         // Generazione della data
         generateDate() {
             return DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);

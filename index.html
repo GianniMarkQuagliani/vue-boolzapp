@@ -78,7 +78,12 @@
                         <div class="search-icon">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                        <input class=" search2" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input 
+                        v-model="foundContacts" 
+                        @input="searchContacts" 
+                        placeholder="Cerca o inizia una nuova chat" 
+                        type="text" 
+                        class="search-chat">
                     </div>
                     <!-- /Search -->
 
