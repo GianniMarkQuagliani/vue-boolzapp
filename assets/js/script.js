@@ -243,6 +243,13 @@ createApp({
         generateDate() {
             return DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
         },
+        openDropdown() {
+            this.open = true;
+        },
+        deleteMessage(index) {
+            const message = this.contacts[this.activeContact].messages[index];
+            this.contacts[this.activeContact].messages.splice(index, 1);
+        }
     }
 
 
