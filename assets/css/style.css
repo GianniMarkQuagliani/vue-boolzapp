@@ -358,3 +358,12 @@ li {
 .visible {
     display: block;
 }
+
+.contactsNotFound {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: rgb(158, 21, 21);
+    text-decoration: underline black;
+}

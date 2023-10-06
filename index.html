@@ -80,24 +80,20 @@
                         </div>
                         <input 
                         v-model="foundContacts" 
-                        @input="searchContacts" 
+                        @input="searchContacts()" 
                         placeholder="Cerca o inizia una nuova chat" 
                         type="text" 
-                        class="search-chat">
+                        class="search2">
                     </div>
                     <!-- /Search -->
 
                     <!-- Contacts -->
                     <div class="contacts ">
                         <!-- Questo ciclo v-for itera attraverso l'array "contacts" assegnando a "contact" ogni elemento e a "index" l'indice corrispondente. -->
-                        <div v-for="(contact, index) in contacts">
+                        <div v-for="(contact, index) in filteredContacts" :key="index">
 
                             <!-- Contact -->
-                            <div 
-                            :class="['contact', { '': activeContact === index }]"
-                            @click="changeContact(index)"
-                            v-if="contact.visible === true"
-                            >
+                            <div :class="['contact', { '': activeContact === index }]" @click="changeContact(index)">
                                 <!-- Circle Contact -->
                                 <div class="circle-contact ">
                                     <img :src=" './assets/img/avatar' + contact.avatar  + '.jpg' ">
@@ -116,6 +112,8 @@
                             
                         </div>
 
+                        <div class="contactsNotFound" v-if="filteredContacts.length === 0"><h3>Non abbiamo trovato contatti!</h3>
+                        </div>
 
                     </div>
                 </div>

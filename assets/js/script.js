@@ -170,6 +170,7 @@ createApp({
             ],
             activeContact: 0, // Contatto attualmente attivo
             myMessage: "", // Messaggio inserito dall'utente
+            foundContacts: "", // Ricerca dell'utente
         }
     },
     methods: {
@@ -221,36 +222,32 @@ createApp({
             }, 1000);
         },
 
-        // Milestone : Filtrare i contatti
-        searchContacts() {
-            for (let i = 0; i < this.contacts.length; i++) {
-                const contact = this.contacts[i];
-                const foundContactsLower = this.foundContacts.toLowerCase();
-                const nameLower = contact.name.toLowerCase();
-                
-                if (!nameLower.includes(foundContactsLower) && foundContactsLower !== "") {
-                    contact.visible = false;
-                    this.notShowing = true;
-                } else {
-                    contact.visible = true;
-                    this.actuallyFoundContacts.push(contact);
-                }
-                console.log(contact);
-            }
-        },        
+        // Milestone 3: Ricerca dell'utente
+        resetVisibility() {
+            this.contacts.forEach((contact) => {
+              contact.visible = true;
+            });
+          },
 
         // Generazione della data
         generateDate() {
             return DateTime.now().setLocale('it').toLocaleString(DateTime.DATETIME_SHORT_WITH_SECONDS);
         },
-        openDropdown() {
-            this.open = true;
-        },
+
         deleteMessage(index) {
             const message = this.contacts[this.activeContact].messages[index];
             this.contacts[this.activeContact].messages.splice(index, 1);
         }
-    }
+    },
+
+    computed: {
+        filteredContacts() {
+          // Utilizza un computed per calcolare i contatti filtrati
+          return this.contacts.filter((contact) =>
+            contact.name.toLowerCase().includes(this.foundContacts.toLowerCase())
+          );
+        },
+    },
 
 
 }).mount('#app');
